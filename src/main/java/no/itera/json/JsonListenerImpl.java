@@ -1,8 +1,6 @@
 package no.itera.json;
 
-import org.antlr.v4.runtime.tree.TerminalNode;
-
-import static no.itera.json.JsonLexer.NULL;
+import org.antlr.v4.runtime.tree.ErrorNode;
 
 public class JsonListenerImpl extends JsonBaseListener {
 
@@ -12,10 +10,20 @@ public class JsonListenerImpl extends JsonBaseListener {
     }
 
     @Override
-    public void visitTerminal(TerminalNode terminalNode) {
-        if (terminalNode.getSymbol().getType() == NULL) {
-            System.out.println("Null value found");
-        }
+    public void exitNull(JsonParser.NullContext ctx) {
+        System.out.println("Null value found");
+    }
+
+
+    @Override
+    public void exitNum(JsonParser.NumContext ctx) {
+        System.out.println("Number found: " + ctx.getText());
+    }
+
+    @Override
+    public void visitErrorNode(ErrorNode node) {
+        // deal with parsing errors
+        super.visitErrorNode(node);
     }
 
 }
