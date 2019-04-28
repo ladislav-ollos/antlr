@@ -2,7 +2,7 @@ grammar Json;
 /*
  * Parser Rules
  */
-object : '{'( STRING ':' value (',' STRING ':' value )* )? '}';
+object : '{'( labels+=STRING ':' values+=value (',' labels+=STRING ':' values+=value )* )? '}';
 
 value:   object  #obj
        | array   #arr
@@ -13,7 +13,7 @@ value:   object  #obj
        | NULL    #null
        ;
 
-array: '['(  value (',' value )* )? ']';
+array: '['(  values+=value (',' values+=value )* )? ']';
 
 /*
  * Lexer Rules
