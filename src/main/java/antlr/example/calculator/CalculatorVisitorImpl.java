@@ -1,4 +1,4 @@
-package no.itera.calculator;
+package antlr.example.calculator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

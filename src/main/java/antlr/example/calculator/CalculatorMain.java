@@ -1,4 +1,4 @@
-package no.itera.calculator;
+package antlr.example.calculator;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;

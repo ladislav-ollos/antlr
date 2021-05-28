@@ -1,4 +1,4 @@
-package no.itera.json;
+package antlr.example.json;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.Token;

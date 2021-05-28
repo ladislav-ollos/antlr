@@ -1,4 +1,4 @@
-package no.itera.calculator;
+package antlr.example.calculator;
 
 import java.math.BigInteger;
 

@@ -1,4 +1,4 @@
-package no.itera.json;
+package antlr.example.json;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class JsonMain {
 
-    private static JsonListener listener = new JsonListenerImpl(); // listener
+    private static final JsonListener listener = new JsonListenerImpl(); // listener
 
     public static void main(String[] args) {
         try (Scanner scanIn = new Scanner(System.in)) {
